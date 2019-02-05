@@ -1,7 +1,7 @@
 import unittest
 from chalicelib.password_strength import compute_strength
 
-class TestStringMethods(unittest.TestCase):
+class TestComputeStrength(unittest.TestCase):
 
     def test_empty_password(self):
         self.assertEqual(compute_strength(''), 0)
