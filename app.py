@@ -3,11 +3,7 @@ from chalicelib.password_strength import compute_strength
 import logging
 
 app = Chalice(app_name='password-strength-checker')
-app.log.setLevel(logging.DEBUG)
-
-@app.route('/')
-def index():
-    return {'hello': 'world'}
+app.log.setLevel(logging.INFO)
 
 @app.route('/password/compute-strength', methods=['POST'],
            content_types=['application/json'])
